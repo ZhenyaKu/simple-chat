@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import './App.scss';
+import ChatList from './components/chat-list/chat-list';
+import Header from './components/header/header';
+import Send from './components/send/send';
 
 function App() {
+  const [messages, setMessages] = useState([]);
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <ChatList messages={messages} />
+      <Send onSend={(message) => {
+        setMessages([
+          ...messages,
+          { message, date: new Date().toLocaleTimeString().slice(0, -3) }
+        ])
+      }} />
     </div>
   );
 }

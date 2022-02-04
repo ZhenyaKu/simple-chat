@@ -1,0 +1,36 @@
+.massageFormWrapper {
+    margin-bottom:0.5rem;
+}
+
+.massageForm{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background:#252525;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+
+    .message,
+    .btn{
+        border: none;
+        background: #252525;
+        outline: none;
+        color: #fff;
+    }
+
+    .message{
+        margin-left: 0.5rem;
+        width: 100%;
+        height: 40px;
+    }
+
+    .btn{
+        margin-right: 0.5rem;
+
+        .btnIcon{
+            &:hover{
+            color: #6ad3d3;
+            }
+        }
+    }
+}
