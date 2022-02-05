@@ -1,5 +1,5 @@
 {
-  "homepage": "http://ZhenyaKu.github.io/simple-chat/",
+  "homepage": "http://ZhenyaKu.github.io/simple-chat",
   "name": "chat",
   "version": "0.1.0",
   "private": true,
@@ -20,7 +20,7 @@
     "web-vitals": "^2.1.2"
   },
   "scripts": {
-    "predeploy": "yarn add build",
+    "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
